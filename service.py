@@ -21,6 +21,7 @@ START SERVICE:
     python -m uvicorn service:app --reload --port 8899    
 """
 
+load_dotenv()
 database = os.environ.get('DATABASE')
 user = os.environ.get('USER')
 password = os.environ.get('PASSWORD')
@@ -30,7 +31,6 @@ PATH1 = os.environ.get('PATH1')  # CONTROL MODEL
 PATH2 = os.environ.get('PATH2')  # TEST MODEL
 
 
-load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
 warnings.filterwarnings("ignore")
 
@@ -190,6 +190,7 @@ def get_exp_group(user_id: int) -> str:
 def recommended_posts(id: int, time: datetime, limit: int = 10) -> Response:
     """
     GET {LIMIT} RECOMMENDED POSTS
+    EXAMPLE QUERY: http://localhost:8899/post/recommendations/?id=5&time=2021-10-2 10:35:54&limit=10
     """
     start_time = datetime.now()
     df_user = prepare_df_user(id, time, df_user_data)
@@ -203,11 +204,12 @@ def recommended_posts(id: int, time: datetime, limit: int = 10) -> Response:
 def baseline(id: int, time: datetime, limit: int = 10) -> List[PostGet]:
     """
     GET {LIMIT} RANDOM POSTS
-    EXAMPLE QUERY: http://localhost:8899/baseline_5_random_posts/?id=5&time=2021-10-2 10:35:54&limit=10
+    EXAMPLE QUERY: http://localhost:8899/baseline/?id=5&time=2021-10-2 10:35:54&limit=10
     """
     nums = random.sample(
         list(post_data.post_id.values),
         limit
     )
-    result = post_data[post_data.post_id.isin(nums)].rename({'post_id': 'id'}, axis=1).to_dict(orient='records')
+    result = default_posts_data[default_posts_data.id.isin(nums)]\
+        .to_dict(orient='records')
     return result
