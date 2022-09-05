@@ -1,7 +1,16 @@
 from setuptools import find_packages, setup
+import pathlib
+import pkg_resources
 
 with open("README.md", "r") as file:
     long_description = file.read()
+
+with pathlib.Path('requirements.txt').open() as requirements_txt:
+    install_requires = [
+        str(requirement)
+        for requirement
+        in pkg_resources.parse_requirements(requirements_txt)
+    ]
 
 
 setup(
@@ -12,8 +21,7 @@ setup(
     author='Donskow Andrew',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    url='https://github.com/Donskoy-Andrey/Post_RecSys',
     python_requires='>=3.6',
     include_package_data=True,
-    zip_safe=False
+    install_requires=install_requires
 )
