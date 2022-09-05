@@ -12,7 +12,7 @@ git clone https://github.com/Donskoy-Andrey/Post_RecSys.git
 ```
 docker build . -t TAG
 ```
-где TAG – это имя будущего образа
+где TAG – его имя.
 
 3. Создаем Docker – контейнер:
 ```
