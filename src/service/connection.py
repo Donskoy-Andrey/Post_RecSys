@@ -3,13 +3,6 @@ import os
 import logging
 import warnings
 
-"""
-INSTALL LIBRARIES:
-    pip install -r requirements.txt    
-
-START SERVICE:
-    python -m uvicorn src.service.service:app --reload --port 8899     
-"""
 
 load_dotenv()
 logging.basicConfig(level=logging.DEBUG)
