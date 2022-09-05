@@ -13,5 +13,7 @@ setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     url='https://github.com/Donskoy-Andrey/Post_RecSys',
-    python_requires='>=3.6'
+    python_requires='>=3.6',
+    include_package_data=True,
+    zip_safe=False
 )
