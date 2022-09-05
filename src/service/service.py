@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from datetime import datetime
 import random
 import logging
-from schema import PostGet, Response
+from src.service.schema import PostGet, Response
 from src.data.data_for_launch import default_posts_data, post_data, df_user_data
 from src.models.model_loader import get_exp_group
 from src.features.construct_user_dataframe import prepare_df_user

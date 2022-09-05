@@ -1,4 +1,4 @@
-from connection import CONNECTION
+from src.service.connection import CONNECTION
 import pandas as pd
 
 default_posts_data = pd.read_sql(

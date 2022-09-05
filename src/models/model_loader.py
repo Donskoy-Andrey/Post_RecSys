@@ -3,8 +3,8 @@ import logging
 import joblib
 import hashlib
 
-path_to_control_model = '../../models/model_control.pkl'
-path_to_test_model = '../../models/model_test.pkl'
+path_to_control_model = 'models/model_control.pkl'
+path_to_test_model = 'models/model_test.pkl'
 SALT = 'pepper'
 TEST_PERCENTAGE = 50
 

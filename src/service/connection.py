@@ -8,7 +8,7 @@ INSTALL LIBRARIES:
     pip install -r requirements.txt    
 
 START SERVICE:
-    python -m uvicorn service:app --reload --port 8899    
+    python -m uvicorn src.service.service:app --reload --port 8899     
 """
 
 load_dotenv()

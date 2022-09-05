@@ -2,8 +2,8 @@ import pandas as pd
 
 from ..service.schema import Response
 import logging
-from model_loader import load_model
-from ..data.data_for_launch import default_posts_data
+from src.models.model_loader import load_model
+from src.data.data_for_launch import default_posts_data
 
 
 def get_predict(df_user: pd.DataFrame, limit: int, exp_group: str) -> Response:
