@@ -27,9 +27,3 @@
 6. Выдача результата.
 
 ![Service Example](https://github.com/Donskoy-Andrey/Post_RecSys/blob/master/images/example.gif)
-
-# Описание репозитория
-**service.py** - сервис проекта, написанный на FastAPI\
-**schema.py** - валидация выходных данных\
-**.env.example** - пример данных для подключения (реальные данные скрыты в .gitignore)\
-**project.ipynb** - полная реализация 1 этапа с созданием ML-моделей.
