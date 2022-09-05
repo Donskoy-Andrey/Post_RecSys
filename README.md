@@ -26,7 +26,7 @@
 5. Сортировка по метрике и выбор необходимого числа лучших.
 6. Выдача результата.
 
-![Service Example]()
+![Service Example](https://github.com/Donskoy-Andrey/Post_RecSys/blob/master/images/example.gif)
 
 # Описание репозитория
 **service.py** - сервис проекта, написанный на FastAPI\
