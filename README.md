@@ -41,7 +41,7 @@ http://localhost:8899/post/recommendations/?id=2021&time=2020-11-11%2010:35:54&l
 \
 ![Service Example](https://github.com/Donskoy-Andrey/Post_RecSys/blob/master/images/example.gif)
 
-# Аспекты разработки
+# Стадии разработки
 В качестве метрики оценки постов для рекомендации была выбрана ROC – AUC на таргете "поставил ли пользователь лайк посту".
 
 Проект включает в себя два блока: применение методов машинного обучения для обработки исходных данных и построения моделей (Stack: sklearn, catboost, nltk, pandas, numpy и др.), а также создание сервиса для взаимодействия с моделями в рамках AB-тестирования (Stack: FastAPI, pydantic, hashlib и др.)
