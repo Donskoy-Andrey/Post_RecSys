@@ -1,10 +1,17 @@
 from setuptools import find_packages, setup
 
+with open("README.md", "r") as file:
+    long_description = file.read()
+
+
 setup(
-    name='src',
+    name='Post_RecSys',
     packages=find_packages(),
     version='0.1.0',
-    description='The project is a recommendation system for text posts based on users data publications data and interactions between them.',
+    description='Recommender system for text posts based on users data publications data and interactions between them.',
     author='Donskow Andrew',
-    license='',
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url='https://github.com/Donskoy-Andrey/Post_RecSys',
+    python_requires='>=3.6'
 )
