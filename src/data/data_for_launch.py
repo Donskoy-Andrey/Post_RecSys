@@ -30,4 +30,3 @@ df_time_data = pd.read_sql(
     """,
     con=CONNECTION
 )
-

@@ -5,13 +5,14 @@ import logging
 from datetime import datetime
 
 
-def prepare_df_user(id: int, time: datetime, df_user) -> pd.DataFrame:
+def prepare_df_user(user_id: int, time: datetime, df_user) -> pd.DataFrame:
     """
     PREPARE USER DATAFRAME WITH ALL POSTS
     FOR FEEDING THE MODEL
     """
     logging.info('Creating DataFrame for User')
-    df_user = df_user[df_user.user_id == id]
+
+    df_user = df_user[df_user.user_id == user_id]
     df_user = df_user.drop('user_id', axis=1)
 
     post_data['month'] = time.month
